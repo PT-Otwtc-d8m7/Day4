@@ -59,70 +59,173 @@
             background-color: rgb(74, 145, 216);
             
         } */
+        * {
+            box-sizing: border-box;
+        }
 
         .container
         {
-
+            display : inline-block;
+            position : relative;   
+            width: 480px;
+            height: 360px;
+            left  : 50px;
+            font-family: 'Raleway', sans-serif;
         }
 
-        .Pic
+        .container figure
         {
-            width: auto;
-            height: auto;
-            transition-duration: 3s;
-            transition-delay: 0.5;
+            display: inline-block;
+            overflow: hidden;
+            margin: 80px 1%;
+            width: 480px;
+            height: 360px;
+            text-align: center;
+            cursor: pointer;
         }
 
-       
-        /* .Pic:hover
+        .container figure img
         {
-            transform: scaleX(1.5);
-            transform: translateX(50px);  
-        } */
-
-        .img {
-            filter : blur(90%);
+            display: block;
+            filter: brightness(30%);
+            transform: translateX(-30px);
+            border-width: 1px;
+            border-color: white;
+            transition: opacity 0.35s, transform 0.35s;
+            transition-duration: 0.5s;
+            transition-delay: 0s ;
         }
 
-        .img:hover
+        .container:hover figure img
         {
-            filter : blur(30%);
+            filter: brightness(100%);
+            /* -webkit-transition: opacity 0.35s, -webkit-transform 0.35s; */
+            
+            transform: translateX(0px);
         }
 
-        .Para
+        .container .Para
         {
-            margin-top : -140px;
-            color : rgb(255, 255, 255);
+            position: absolute;
+            display: inline-block;
+            top : 320px;
+            left : 35px;
+            color : rgb(255, 255, 255); 
             font-size : 30px;
-            transition-duration: 1s;
-            transition-delay: 0.3s;
+            transition-delay: 0.1s;
+            /* position: absolute; */
+            transition-duration: 0.5s;
+
         }
 
-        .Para span
+        .container:hover .Para
         {
-            margin-top: -20px;
+            transform: translateY(-30px);
+            color : rgb(255, 255, 255);
         }
 
-        .Para:hover
+        .container:hover .Hide
         {
-            transform: translateY(-40px);
-            color : white;
+            display : block;
+        }       
+
+        .Hide
+        {
+            display : none;
+            left : 20px;
+            margin-top : -35px;
+            font-size: 15px;
+            font-weight: 100;
+            text-transform: uppercase;
+            font-weight: 10;
+            color : rgba(255, 255, 255, 0.806); 
+
         }
+
+        .container2
+        {
+            display : inline-block;
+            position: relative;
+            top : -80px;
+            left : 100px;
+            justify-self: flex-end;
+        }
+
+
+        .container2 .Para
+        {
+            position: relative;
+            display: inline-block;
+            top : 320px;
+            left : 35px;
+            color : rgb(255, 255, 255); 
+            font-size : 30px;
+            transition-delay: 0.1s;
+            position: absolute;
+            transition-duration: 0.5s;
+
+        }
+
+        .container2:hover .Para
+        {
+            transform: translateY(-30px);
+            color : rgb(255, 255, 255);
+        }
+
+        .container2:hover .Hide
+        {
+            display : block;
+        }       
+
+        .container2 .Hide
+        {
+            display : none;
+            left : 20px;
+            margin-top : -35px;
+            font-size: 15px;
+            font-weight: 100;
+            text-transform: uppercase;
+            font-weight: 10;
+            color : rgba(255, 255, 255, 0.806); 
+
+        }
+
 
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- <div class="container"></div> -->
     <!-- <div class="circleB"></div>
     <div class="circleA"></div> -->
-    <div class="container">
-        <div class="Pic">
-            <img src="https://tympanus.net/Development/HoverEffectIdeas/img/12.jpg" >
+    <figure class="container">
+        <div>
+            <div class="Pic">
+                <figure>
+                        <img src="https://tympanus.net/Development/HoverEffectIdeas/img/12.jpg" height="360px"; width="580px">
+                </figure> 
+            </div>
+            <div class="Para">
+                <h2 style="font-weight: 100">NICE
+                    <span style="font-weight: 800;">LILY</span>
+                </h2>
+                <p class="Hide">Lily likes to play with crayons and pencils</p>
+            </div>
         </div>
-        <div class="Para">
-            <h2>NICELILY</h2>
-            <span>Lily like to play</span>
-        </div>
+    </figure>
+
+    <div class="container2">
+            <div class="Pic2">
+                        <img src="https://tympanus.net/Development/HoverEffectIdeas/img/2.jpg">
+            </div>
+            <div class="Para2">
+                <h2 style="font-weight: 100">NICE
+                    <span style="font-weight: 800;">LILY</span>
+                </h2>
+                <p class="Hide">Lily likes to play with crayons and pencils</p>
+            </div>
     </div>
     
 </body>
