@@ -144,50 +144,69 @@
 
         .container2
         {
-            display : inline-block;
+            display : inline-flex;
             position: relative;
             top : -80px;
             left : 100px;
-            justify-self: flex-end;
+            font-family: 'Raleway', sans-serif;
+            align-items: center;
+            justify-content: center;
         }
 
-
-        .container2 .Para
+        .container2::before
         {
-            position: relative;
-            display: inline-block;
-            top : 320px;
-            left : 35px;
-            color : rgb(255, 255, 255); 
-            font-size : 30px;
-            transition-delay: 0.1s;
+            display : hidden;
             position: absolute;
-            transition-duration: 0.5s;
-
+            background-color: black;
+            opacity : 0;
+            width: 480px;
+            height: 320px;
+            
         }
 
-        .container2:hover .Para
+        .container2::before :hover
+        {
+            top: 0;
+            left: 0;
+            opacity: 60%;
+            transform: translate3d(0,50%,0);
+        }
+
+        .container2 .Para2
+        {
+            position: absolute;
+            top : 120px;
+            color: black;
+            font-size: 25px;
+            left : 140px;
+            transition-duration: 0.5s;
+            
+        }
+
+        .container2 .Para2 h2
+        {
+            opacity: 100%;
+        }     
+
+        .container2 .Para2 p
+        {
+            display : hidden;
+            margin-top : 100px;
+            color : white;
+            margin-left: -25px;
+            font-size: 15px;
+            opacity: 0%;  
+        }      
+
+        .container2:hover .Para2 
         {
             transform: translateY(-30px);
             color : rgb(255, 255, 255);
         }
 
-        .container2:hover .Hide
+        .container2:hover .Para2 p
         {
-            display : block;
-        }       
-
-        .container2 .Hide
-        {
-            display : none;
-            left : 20px;
-            margin-top : -35px;
-            font-size: 15px;
-            font-weight: 100;
-            text-transform: uppercase;
-            font-weight: 10;
-            color : rgba(255, 255, 255, 0.806); 
-
+            opacity: 100%;
         }
 
 
@@ -200,7 +219,7 @@
     <!-- <div class="container"></div> -->
     <!-- <div class="circleB"></div>
     <div class="circleA"></div> -->
-    <figure class="container">
+    <div class="container">
         <div>
             <div class="Pic">
                 <figure>
@@ -214,18 +233,23 @@
                 <p class="Hide">Lily likes to play with crayons and pencils</p>
             </div>
         </div>
-    </figure>
+    </div>
 
     <div class="container2">
             <div class="Pic2">
                         <img src="https://tympanus.net/Development/HoverEffectIdeas/img/2.jpg">
             </div>
             <div class="Para2">
-                <h2 style="font-weight: 100">NICE
-                    <span style="font-weight: 800;">LILY</span>
+                <h2 style="font-weight : 100"> HOLY
+                    <span style="font-weight: 600; font-style: bold;">SADIE</span>
                 </h2>
-                <p class="Hide">Lily likes to play with crayons and pencils</p>
+
+                <p>SADIE NEVER TOOK HER EYES OF ME. 
+                    <br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp SHE HAD A DARK SOUL
+                </p>
             </div>
+
+            <div class="Layer"></div>
     </div>
     
 </body>
